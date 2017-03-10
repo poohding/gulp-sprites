@@ -1,0 +1,28 @@
+// sprites
+@mixin sprite-retina-width($sprite) {
+  width: nth($sprite, 5) / 2;
+}
+@mixin sprite-retina-height($sprite) {
+  height: nth($sprite, 6) / 2;
+}
+@mixin sprite-retina-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3) / 2;
+  $sprite-offset-y: nth($sprite, 4) / 2;
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+@mixin sprite-retina-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+@mixin sprite-retina-size($sprite) {
+    $sprite-sheet-width: nth($sprite, 7) / 2;
+    $sprite-sheet-height: nth($sprite, 8) / 2;
+    background-size: $sprite-sheet-width $sprite-sheet-height;
+}
+@mixin sprite-retina($sprite) {
+    @include sprite-retina-image($sprite);
+    @include sprite-retina-position($sprite);
+    @include sprite-retina-width($sprite);
+    @include sprite-retina-height($sprite);
+    @include sprite-retina-size($sprite);
+}

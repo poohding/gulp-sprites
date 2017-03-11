@@ -1,7 +1,6 @@
 # gulp-sprites
 Convert a set of images into a spritesheet and CSS variables via gulp
 
-
 ## Install
 ```bash
 npm install
@@ -13,6 +12,9 @@ gulp
 ```
 - src/{service}/sprites/{folder}/*.png => dist/{service}/sprites/{folder}/sp_{folder}.png
 - src/{service}/sprites/{folder}/*.png => dist/{service}/sprites/{folder}/sp_{folder}.scss
+
+폴더내에 이미지 아이콘들: 
+
 
 ## Browser Testing
 ```bash
